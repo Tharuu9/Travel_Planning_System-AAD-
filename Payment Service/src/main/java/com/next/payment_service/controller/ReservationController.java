@@ -50,4 +50,10 @@ public class ReservationController {
         }
         return false;
     }
+
+    @GetMapping(value = "/getAll")
+    public ResponseUtil getAll(String id){
+        return new ResponseUtil(HttpStatus.OK,"Done",reservationService.getAll(id));
+    }
+
 }
