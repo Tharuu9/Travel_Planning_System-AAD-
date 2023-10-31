@@ -38,6 +38,6 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public List<Reservation> getAll(String id) {
-        return null;
+        return reservationRepository.findAllByUserId(id);
     }
 }
